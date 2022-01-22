@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Renders correctly 1`] = `
+<div
+  className="container"
+>
+  <title>
+    Placeholder
+  </title>
+  <nav>
+    <p
+      className="navHeading"
+    >
+      Parrot Academy
+    </p>
+  </nav>
+  <main>
+     
+  </main>
+</div>
+`;
