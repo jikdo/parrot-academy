@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout Renders correctly 1`] = `
+exports[`Layout renders correctly 1`] = `
 <div
   className="container"
 >
   <title>
-    Placeholder
+    Parrot Academy
+     | 
+    
   </title>
   <nav>
     <p
       className="navHeading"
     >
-      Parrot Academy
+      <a
+        href="/"
+      >
+        Parrot Academy
+      </a>
     </p>
   </nav>
-  <main>
-     
-  </main>
+  <main />
 </div>
 `;
