@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import {
   hero,
@@ -9,9 +9,10 @@ import {
   categoryItem,
   categoryItemHeading,
 } from './index.module.css';
+import ContentList from "../components/ContentList";
 
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Parrot Academy">
       <div className={hero}>
@@ -29,7 +30,7 @@ const IndexPage = () => {
             </Link>
           </li>
           <li className={categoryItem}>
-            <Link>
+            <Link to="/how-to">
               <div>
                 <ul>
                   <li className={categoryItemHeading}>How To</li>
@@ -39,7 +40,7 @@ const IndexPage = () => {
             </Link>
           </li>
           <li className={categoryItem}>
-            <Link>
+            <Link to="/strategies">
               <div>
                 <ul>
                   <li className={categoryItemHeading}>Strategies</li>
@@ -51,12 +52,30 @@ const IndexPage = () => {
         </ul>
       </div>
 
-    {/* featured */}
+      {/* featured */}
       <div>
-        <h2 style={{textAlign: 'center'}}>Featured</h2>
+        <h2 style={{ textAlign: 'center' }}>Featured</h2>
+        <ContentList contents={data.allMdx.nodes} />
+
       </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+query {
+  allMdx(filter: {frontmatter: {featured: {eq: true}}}) {
+    nodes {
+      id
+      frontmatter {
+        category
+        date
+        title
+      }
+      slug
+    }
+  }
+}
+`
 
 export default IndexPage;

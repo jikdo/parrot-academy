@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { graphql, Link, StaticQuery } from 'gatsby';
-// import "@fontsource/roboto";
+import "@fontsource/roboto";
 import { container, navHeading } from './layout.module.css';
 
-const Layout = ({ data , pageTitle, children }) => {
+const Layout = ({ data, pageTitle, children }) => {
 
     return (
         <div className={container}>
@@ -21,9 +21,9 @@ const Layout = ({ data , pageTitle, children }) => {
 }
 
 export default function WrapperLayout(props) {
-    return(
+    return (
         <StaticQuery
-        query={graphql`
+            query={graphql`
         query {
             site {
                 siteMetadata {
@@ -32,7 +32,7 @@ export default function WrapperLayout(props) {
             }
         }
         `}
-        render={data => <Layout data={data} {...props} /> }
+            render={data => <Layout data={data} {...props} />}
         />
     )
 }

@@ -3,14 +3,14 @@ import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import ContentList from '../../components/ContentList';
 
-const GettingStartedPage = ({ data }) => {
+const StrategiesPage = ({ data }) => {
 
   return (
 
-    <Layout pageTitle="Getting Started">
+    <Layout pageTitle="Strategies">
       <div>
-        <h2>Getting Started</h2>
-        <p>Beginner friendly articles to help you jumpstart your understanding of what Parrot offers</p>
+        <h2>DeFi strategies using Parrot Protocol</h2>
+        <p> Effiiently use Parrot to generate the best yield </p>
       </div>
 
       <ContentList contents={data.allMdx.nodes} />
@@ -24,7 +24,7 @@ const GettingStartedPage = ({ data }) => {
 
 export const query = graphql`
 query {
-  allMdx(filter: {frontmatter: {category: {eq: "getting-started"}}}) {
+  allMdx(filter: {frontmatter: {category: {eq: "strategies"}}}) {
     nodes {
       id
       slug
@@ -38,4 +38,4 @@ query {
 }
 `
 
-export default GettingStartedPage;
+export default StrategiesPage;
