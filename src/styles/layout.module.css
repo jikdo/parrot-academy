@@ -1,0 +1,22 @@
+.container {
+    font-family: 'Roboto';
+    padding: 10px;
+}
+
+.nav-bar {
+ margin-bottom: 80px;   
+}
+
+.nav-heading {
+    font-size: 1.4rem;
+}
+
+.nav-heading a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-heading a:active {
+    color: black;
+}
+

@@ -1,0 +1,42 @@
+.contents-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.contents-list a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.content-item {
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+.content-image {
+    max-width: 100%;
+}
+
+.content-category {
+    text-transform: uppercase;
+    color: white;
+    background-color: #d0d0d0;
+    padding: 10px;
+    display: inline-block;
+}
+
+.content-title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+.content-paragraph {
+    line-height: 1.5rem;
+    color: #757575;
+}

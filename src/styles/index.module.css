@@ -1,41 +1,51 @@
 .hero {
-    background-color: #ebebeb00;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     color: black;
-    
-
 }
+
 .hero-heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 40px;
     text-align: center;
 }
 
 .hero-paragraph {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
+    color: #757575;
 }
 
 .category {
     display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
     justify-content: space-between;
-    list-style: none;
-    margin-top: 50px;    
-    max-width: 800px;
-
+    margin: 30px auto;
 }
 
 .category a {
     text-decoration: none;
+    color: black;
+}
+
+.category-item {
+    margin: 0 20px
 }
 
 .category-item ul {
     list-style: none;
-    
+    padding: 0;
+
 }
 
 .category-item-heading {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 5px;
+}
+
+
+.featured h2 {
+    font-size: 1.6rem;
+    text-align: center;
 }
