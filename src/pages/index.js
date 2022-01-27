@@ -8,56 +8,59 @@ import {
   category,
   categoryItem,
   categoryItemHeading,
-} from './index.module.css';
+  featured,
+} from '../styles/index.module.css';
 import ContentList from "../components/ContentList";
 
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout pageTitle="Parrot Academy">
+    <Layout pageTitle="Home">
       <div className={hero}>
-        <h1 className={heroHeading}>Become a Parrot ecosystem <br /> expert 🎓.</h1>
+        <h1 className={heroHeading}>Become a Parrot ecosystem expert.</h1>
         <p className={heroParagraph}>Discover how parrot works, and find the best strategies to boost your yield</p>
-        <ul className={category}>
-          <li className={categoryItem}>
+        <div className={category}>
+          <div className={categoryItem}>
             <Link to="/getting-started">
               <div>
                 <ul>
                   <li className={categoryItemHeading}>Getting Started</li>
-                  <li>See More ➡️</li>
+                  <li>See More </li>
                 </ul>
               </div>
             </Link>
-          </li>
-          <li className={categoryItem}>
+          </div>
+          <div className={categoryItem}>
             <Link to="/how-to">
               <div>
                 <ul>
                   <li className={categoryItemHeading}>How To</li>
-                  <li>See More ➡️</li>
+                  <li>See More </li>
                 </ul>
               </div>
             </Link>
-          </li>
-          <li className={categoryItem}>
+          </div>
+          <div className={categoryItem}>
             <Link to="/strategies">
               <div>
                 <ul>
                   <li className={categoryItemHeading}>Strategies</li>
-                  <li>See More ➡️</li>
+                  <li>See More </li>
                 </ul>
               </div>
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
 
       {/* featured */}
-      <div>
-        <h2 style={{ textAlign: 'center' }}>Featured</h2>
+      <section className={featured}>
+        <h2>Featured</h2>
         <ContentList contents={data.allMdx.nodes} />
+      </section>
 
-      </div>
+
+
     </Layout>
   )
 }
