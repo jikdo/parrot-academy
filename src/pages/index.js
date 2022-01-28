@@ -79,6 +79,12 @@ query {
         category
         date
         title
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        hero_image_alt
       }
       slug
     }

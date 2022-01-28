@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import ContentList from '../../components/ContentList';
-import {textGrey, textCenter} from '../../styles/base.module.css';
+import { textGrey, textCenter } from '../../styles/base.module.css';
 
 const GettingStartedPage = ({ data }) => {
 
@@ -33,6 +33,12 @@ query {
         category
         date
         title
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        hero_image_alt  
       }
     }
   }

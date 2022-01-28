@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import ContentDetail from '../../components/ContentDetail';
 
 const ContentPage = ({ data }) => {
+  console.log(data)
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
     <ContentDetail data={data} />
@@ -22,6 +23,12 @@ query ($id: String) {
         title
         date
         category
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        hero_image_alt
       }
       body
     }

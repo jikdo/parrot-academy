@@ -2,15 +2,16 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../../components/Layout';
 import ContentList from '../../components/ContentList';
+import { textGrey, textCenter } from '../../styles/base.module.css';
 
 const StrategiesPage = ({ data }) => {
 
   return (
 
     <Layout pageTitle="Strategies">
-      <div>
-        <h2>DeFi strategies using Parrot Protocol</h2>
-        <p> Effiiently use Parrot to generate the best yield </p>
+      <div className={textCenter}>
+        <h1>Strategies</h1>
+        <p className={textGrey}> Effiiently use Parrot to generate the best yield </p>
       </div>
 
       <ContentList contents={data.allMdx.nodes} />
@@ -32,6 +33,12 @@ query {
         category
         date
         title
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        hero_image_alt
       }
     }
   }
