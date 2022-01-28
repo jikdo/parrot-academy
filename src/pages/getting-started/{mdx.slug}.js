@@ -1,15 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../components/Layout';
+import ContentDetail from '../../components/ContentDetail';
 
 const ContentPage = ({ data }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <h2>{data.mdx.frontmatter.title}</h2>
-      <p>{data.mdx.frontmatter.date}</p>
-
-      <p><MDXRenderer>{data.mdx.body}</MDXRenderer></p>
+    <ContentDetail data={data} />
     </Layout>
   )
 }

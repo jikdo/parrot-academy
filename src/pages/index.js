@@ -10,6 +10,8 @@ import {
   categoryItemHeading,
   featured,
 } from '../styles/index.module.css';
+import { textGrey } from '../styles/base.module.css';
+
 import ContentList from "../components/ContentList";
 
 
@@ -20,32 +22,35 @@ const IndexPage = ({ data }) => {
         <h1 className={heroHeading}>Become a Parrot ecosystem expert.</h1>
         <p className={heroParagraph}>Discover how parrot works, and find the best strategies to boost your yield</p>
         <div className={category}>
-          <div className={categoryItem}>
+          <div>
             <Link to="/getting-started">
-              <div>
+              <div className={categoryItem}>
+                <span>📚</span>
                 <ul>
                   <li className={categoryItemHeading}>Getting Started</li>
-                  <li>See More </li>
+                  <li className={textGrey}>See More </li>
                 </ul>
               </div>
             </Link>
           </div>
-          <div className={categoryItem}>
+          <div >
             <Link to="/how-to">
-              <div>
+              <div className={categoryItem} >
+                <span>🛠️</span>
                 <ul>
                   <li className={categoryItemHeading}>How To</li>
-                  <li>See More </li>
+                  <li className={textGrey}>See More </li>
                 </ul>
               </div>
             </Link>
           </div>
-          <div className={categoryItem}>
+          <div >
             <Link to="/strategies">
-              <div>
+              <div className={categoryItem}>
+                <span>♟️</span>
                 <ul>
                   <li className={categoryItemHeading}>Strategies</li>
-                  <li>See More </li>
+                  <li className={textGrey}>See More </li>
                 </ul>
               </div>
             </Link>

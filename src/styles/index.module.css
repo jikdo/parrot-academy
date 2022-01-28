@@ -29,20 +29,30 @@
 }
 
 .category-item {
-    margin: 0 20px
+    margin: 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.category-item > span {
+    font-size: 2.4rem;
+    margin-right: 15px;
 }
 
 .category-item ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 
 }
+
 
 .category-item-heading {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 5px;
 }
+
 
 
 .featured h2 {
