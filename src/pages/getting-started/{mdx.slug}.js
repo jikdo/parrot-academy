@@ -21,7 +21,7 @@ query ($id: String) {
       id
       frontmatter {
         title
-        date
+        date(formatString: "MMMM D, YYYY")
         category
         hero_image {
           childImageSharp {

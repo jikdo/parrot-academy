@@ -20,7 +20,7 @@ query ($id: String) {
       id
       frontmatter {
         title
-        date
+        date(formatString: "MMMM D, YYYY")
         category
       }
       body
