@@ -47,15 +47,27 @@
 
 .nav-toggle {
     display: block;
-    width: 30px;
-    height: 30px;
-    background: black;
+    /* width: 30px;
+    height: 30px; */
+    /* background: black; */
+    font-size: 1.8rem;
 }
 
 .nav-items {
     list-style-type: none;
     margin: 0;
 }
+
+.nav-items-show {
+    display: block;
+}
+
+.nav-items-hide {
+    display: none;
+}
+
+
+
 
 .nav-items li {
     margin: 15px 5px;

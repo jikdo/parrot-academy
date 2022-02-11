@@ -2,10 +2,17 @@ import * as React from 'react';
 import { graphql, Link, StaticQuery } from 'gatsby';
 import "@fontsource/roboto";
 import { StaticImage } from 'gatsby-plugin-image';
-import { container, navHeading, navBar, navItems, navToggle, navItemsBody, navHeadingContainer } from '../styles/layout.module.css';
+import { 
+    container,
+    navHeading,
+    navBar,
+    navItems,
+    navItemsShow,
+    navItemsHide,
+    navToggle, navItemsBody, navHeadingContainer } from '../styles/layout.module.css';
 
 const Layout = ({ data, pageTitle, children }) => {
-
+    const [showItems, setShowItems] = React.useState(false);
     return (
         <div className={container}>
             <title>{data.site.siteMetadata.title} | {pageTitle}</title>
@@ -18,14 +25,16 @@ const Layout = ({ data, pageTitle, children }) => {
                         </div>
                     </Link>
 
-                    <div className={navToggle}></div>
+                    <div className={navToggle} onClick={() => {
+                        setShowItems(!showItems);
+                    }}>↕️ </div>
                 </div>
 
 
 
                 <div className={navItemsBody}>
 
-                    <ul className={navItems}>
+                    <ul className={`${navItems} ${showItems ? navItemsShow : navItemsHide}`}>
                         <li>Join Community</li>
                         <li>Contribute</li>
                     </ul>
