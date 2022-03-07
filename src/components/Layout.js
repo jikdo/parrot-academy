@@ -27,7 +27,7 @@ const Layout = ({ data, pageTitle, children }) => {
 
                     <div className={navToggle} onClick={() => {
                         setShowItems(!showItems);
-                    }}>↕️ </div>
+                    }}><StaticImage width={40} src="../images/navToggleIcon.svg" alt="toggle" /> </div>
                 </div>
 
 

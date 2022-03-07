@@ -25,11 +25,24 @@ module.exports = {
                 path: `${__dirname}/strategies/`,
             },
         },
-        'gatsby-plugin-mdx',
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+              gatsbyRemarkPlugins: [
+                {
+                  resolve: `gatsby-remark-images`,
+                  options: {
+                    maxWidth: 100,
+                  },
+                },
+              ],
+            },
+          },
         "gatsby-plugin-image",
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         "gatsby-plugin-mdx-embed",
+        `gatsby-remark-images`,
 
     ]
 }

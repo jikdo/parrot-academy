@@ -1,6 +1,7 @@
 .article-content {
     max-width: 700px;
     margin: auto;
+    line-height: 25px;
 }
 
 .article-image {
@@ -9,6 +10,7 @@
 }
 .article-title {
     font-size: 2rem;
+    line-height: 2.2rem;
 }
 
 .article-nav {
