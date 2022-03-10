@@ -1,7 +1,12 @@
 module.exports = {
     siteMetadata: {
         title: 'Parrot Academy',
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://www.learn.parrot.fi`,
+        description: "",
+        twitterUsername: "",
+        image: "",
+        url: "http://localhost:8000",
+
     },
     plugins: [
         {
@@ -43,6 +48,7 @@ module.exports = {
         "gatsby-transformer-sharp",
         "gatsby-plugin-mdx-embed",
         `gatsby-remark-images`,
+        'gatsby-plugin-react-helmet',
 
     ]
 }

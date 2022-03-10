@@ -27,6 +27,7 @@ query ($id: String) {
           childImageSharp {
             gatsbyImageData
           }
+          publicURL
         }
         hero_image_alt
       }

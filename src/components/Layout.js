@@ -10,17 +10,21 @@ import {
     navItemsShow,
     navItemsHide,
     navToggle, navItemsBody, navHeadingContainer } from '../styles/layout.module.css';
+import SEO from './seo';
+import defaultBanner from '../images/default-banner-parrot.png';
 
 const Layout = ({ data, pageTitle, children }) => {
     const [showItems, setShowItems] = React.useState(false);
+   
     return (
         <div className={container}>
+            <SEO description="Become a Parrot ecosystem expert." image={defaultBanner} />
             <title>{data.site.siteMetadata.title} | {pageTitle}</title>
             <nav className={navBar}>
                 <div className={navHeadingContainer}>
                     <Link to="/">
                         <div className={navHeading}>
-                            <StaticImage width={40} src="../images/parrot-academy-logo.png" alt="academy logo" />
+                            <StaticImage width={40} src="../images/parrotacademylogo.svg" alt="academy logo" />
                             <span>Parrot Academy</span>
                         </div>
                     </Link>
@@ -35,8 +39,8 @@ const Layout = ({ data, pageTitle, children }) => {
                 <div className={navItemsBody}>
 
                     <ul className={`${navItems} ${showItems ? navItemsShow : navItemsHide}`}>
-                        <li>Join Community</li>
-                        <li>Contribute</li>
+                        <li><a href="https://discord.gg/gopartyparrot" alt="Discord link">Join Community</a></li>
+                        <li><a href="https://github.com/jikdo/parrot-academy" alt="Discord link">Contribute</a></li>
                     </ul>
                 </div>
             </nav>
