@@ -76,13 +76,13 @@ exports.createPages = async({graphql, actions}) =>{
   );
 
 
-  const template = path.resolve('src/components/ContentDetail2.js');
+  const template = path.resolve('src/components/ContentDetail.js');
   
 
   gettingStartedQueryResults.data.allMdx.nodes.forEach(node => {
-    console.log('createing xxxxx ', node.slug)
+    
     createPage({
-      path: `/new-getting-started/${node.slug}`,
+      path: `/getting-started/${node.slug}`,
       component: template,
       context: {
         data: node
@@ -91,9 +91,9 @@ exports.createPages = async({graphql, actions}) =>{
   });
 
   howToQueryResults.data.allMdx.nodes.forEach(node => {
-    console.log('createing xxxxx ', node.slug)
+
     createPage({
-      path: `/new-how-to/${node.slug}`,
+      path: `/how-to/${node.slug}`,
       component: template,
       context: {
         data: node
@@ -102,9 +102,9 @@ exports.createPages = async({graphql, actions}) =>{
   });
 
   strategiesQueryResults.data.allMdx.nodes.forEach(node => {
-    console.log('createing xxxxx ', node.slug)
+  
     createPage({
-      path: `/new-strategies/${node.slug}`,
+      path: `/strategies/${node.slug}`,
       component: template,
       context: {
         data: node

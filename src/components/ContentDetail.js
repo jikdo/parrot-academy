@@ -6,20 +6,21 @@ import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SEO from './seo';
 
-const ContentDetail = ({ data }) => {
+const ContentDetail2 = ({ pageContext }) => {
+    const { data } = pageContext;
     return (
         <div>
-           <SEO title={data.mdx.frontmatter.title} image={data.mdx.frontmatter.hero_image ? data.mdx.frontmatter.hero_image.publicURL : ''} description="xxx" article/>
+            <SEO title={data.frontmatter.title} image={data.frontmatter.hero_image ? data.frontmatter.hero_image.publicURL : ''} description="xxx" article />
             <div className={articleContent}>
-                <p className={articleNav}><Link to="/">Home</Link> > <Link to={`/${data.mdx.frontmatter.category}`}>{data.mdx.frontmatter.category.split("-").join(" ")} </Link>  > <span className={textGrey}>Article</span></p>
-                <h1 className={articleTitle}>{data.mdx.frontmatter.title}</h1>
-                <p className={textGrey}>{data.mdx.frontmatter.date}</p>
-                <GatsbyImage image={(() => getImage(data.mdx.frontmatter.hero_image))()} alt={data.mdx.frontmatter.hero_image_alt} />
+                <p className={articleNav}><Link to="/">Home</Link> > <Link to={`/${data.frontmatter.category}`}>{data.frontmatter.category.split("-").join(" ")} </Link>  > <span className={textGrey}>Article</span></p>
+                <h1 className={articleTitle}>{data.frontmatter.title}</h1>
+                <p className={textGrey}>{data.frontmatter.date}</p>
+                <GatsbyImage image={(() => getImage(data.frontmatter.hero_image))()} alt={data.frontmatter.hero_image_alt} />
 
-                <p><MDXRenderer>{data.mdx.body}</MDXRenderer></p>
+                <p><MDXRenderer>{data.body}</MDXRenderer></p>
             </div>
         </div>
     )
 }
 
-export default ContentDetail;
+export default ContentDetail2;
