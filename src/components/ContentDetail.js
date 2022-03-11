@@ -5,11 +5,13 @@ import { textGrey } from '../styles/base.module.css';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import SEO from './seo';
+import Layout from './Layout';
 
 const ContentDetail2 = ({ pageContext }) => {
     const { data } = pageContext;
     return (
         <div>
+            <Layout pageTitle={data.frontmatter.title}>
             <SEO title={data.frontmatter.title} image={data.frontmatter.hero_image ? data.frontmatter.hero_image.publicURL : ''} description="xxx" article />
             <div className={articleContent}>
                 <p className={articleNav}><Link to="/">Home</Link> > <Link to={`/${data.frontmatter.category}`}>{data.frontmatter.category.split("-").join(" ")} </Link>  > <span className={textGrey}>Article</span></p>
@@ -19,6 +21,7 @@ const ContentDetail2 = ({ pageContext }) => {
 
                 <p><MDXRenderer>{data.body}</MDXRenderer></p>
             </div>
+            </Layout>
         </div>
     )
 }
