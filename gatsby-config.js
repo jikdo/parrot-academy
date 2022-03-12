@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+
+
 module.exports = {
     siteMetadata: {
         title: 'Parrot Academy',
@@ -5,7 +11,7 @@ module.exports = {
         description: "",
         twitterUsername: "",
         image: "",
-        url: "http://localhost:8000",
+        url: process.env.GATSBY_WEBSITE_URL ,
 
     },
     plugins: [
