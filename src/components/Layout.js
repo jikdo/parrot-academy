@@ -10,7 +10,7 @@ import {
     navItemsShow,
     navItemsHide,
     navToggle, navItemsBody, navHeadingContainer } from '../styles/layout.module.css';
-import SEO from './seo';
+import Seo from './seo';
 import defaultBanner from '../images/default-banner-parrot.png';
 
 const Layout = ({ data, pageTitle, children }) => {
@@ -18,7 +18,7 @@ const Layout = ({ data, pageTitle, children }) => {
    
     return (
         <div className={container}>
-            <SEO description="Become a Parrot ecosystem expert." image={defaultBanner} />
+            <Seo description="Become a Parrot ecosystem expert." image={defaultBanner} />
             <title>{data.site.siteMetadata.title} | {pageTitle}</title>
             <nav className={navBar}>
                 <div className={navHeadingContainer}>
@@ -29,7 +29,9 @@ const Layout = ({ data, pageTitle, children }) => {
                         </div>
                     </Link>
 
-                    <div className={navToggle} onClick={() => {
+                    <div role="button" tabIndex={0} className={navToggle} onClick={() => {
+                        setShowItems(!showItems);
+                    }} onKeyDown={() => {
                         setShowItems(!showItems);
                     }}><StaticImage width={40} src="../images/navToggleIcon.svg" alt="toggle" /> </div>
                 </div>

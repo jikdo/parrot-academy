@@ -4,7 +4,7 @@ import { articleTitle, articleContent, articleNav } from '../styles/contentdetai
 import { textGrey } from '../styles/base.module.css';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import SEO from './seo';
+import Seo from './seo';
 import Layout from './Layout';
 
 const ContentDetail2 = ({ pageContext }) => {
@@ -12,7 +12,7 @@ const ContentDetail2 = ({ pageContext }) => {
     return (
         <div>
             <Layout pageTitle={data.frontmatter.title}>
-            <SEO title={data.frontmatter.title} image={data.frontmatter.hero_image ? data.frontmatter.hero_image.publicURL : ''} description="xxx" article />
+            <Seo title={data.frontmatter.title} image={data.frontmatter.hero_image ? data.frontmatter.hero_image.publicURL : ''} description="" article />
             <div className={articleContent}>
                 <p className={articleNav}><Link to="/">Home</Link> > <Link to={`/${data.frontmatter.category}`}>{data.frontmatter.category.split("-").join(" ")} </Link>  > <span className={textGrey}>Article</span></p>
                 <h1 className={articleTitle}>{data.frontmatter.title}</h1>
