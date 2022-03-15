@@ -1,54 +1,59 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="#">
+    <img alt="Gatsby" src="./src/images/default-banner-parrot.png" width="700" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## How to Contribute
 
+1.  **Setup**
+
+    Go to root path and install packages
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    npm install
     ```
+    Start a local server
+    ```
+    gatsby develop -H 0.0.0.0
+    ````
 
-2.  **Start developing.**
+2.  **Add Content**
 
     Navigate into your new site’s directory and start it up.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
+    You can contribute to 3 categories of content. You can find the corresponding folders in the root directory.
+
+    For Example to add a 'Getting Started' content.
+
+    * Create a folder in the Getting Started directory with the slug of your post as the name.
+
+    > eg. `Getting Started with Pai article` will have a folder name called `getting-started-with-pai`
+
+    * Add an `index.mdx` file to the new folder and add your content to it. The content of the mdx should preceed with the following frontmatter requirements.
+    ```md
+    ---
+    title: Article or Content Name
+    date: "YYYY-MM-DD"
+    category: "strategies" or "how-to" or getting-started"
+    featured: true
+    hero_image: "relative/path/to/image" or null 
+    hero_image_alt: "image alt text"
+    ---
     ```
 
-3.  **Open the code and start customizing!**
+    Content supports the markdown formating style. 
+    
+    It also supports Youtube Embed. To embed a youtube video in your mdx file.
+    For example use at the position you want the video to show.
+    ```mdx
+    <Youtube youtubeId="K4TOrB7at0Y">
+    ```
+    You can find other options [here](https://www.mdx-embed.com/?path=/docs/components-youtube--usage)
 
-    Your site is now running at http://localhost:8000!
+    > You can also add image files to your article folder and reference them using their relative paths.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## Visit us on [Discord](https://discord.gg/gopartyparrot) for more information. 
