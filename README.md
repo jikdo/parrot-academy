@@ -21,8 +21,6 @@
 
 2.  **Add Content**
 
-    Navigate into your new site’s directory and start it up.
-
     You can contribute to 3 categories of content. You can find the corresponding folders in the root directory.
 
     For Example to add a 'Getting Started' content.
@@ -56,4 +54,4 @@
 
 
 
-## Visit us on [Discord](https://discord.gg/gopartyparrot) for more information. 
+## Visit us on [💬 Discord](https://discord.gg/gopartyparrot) for more information. 
