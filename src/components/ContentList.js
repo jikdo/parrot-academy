@@ -10,7 +10,7 @@ import {
 } from '../styles/contentlist.module.css';
 
 const ContentList = ({ contents }) => {
-
+    console.log(contents)
     return <div className={contentsList}>
         {contents.map(item => <div key={item.id} className={contentItem}>
             <Link to={`/${item.frontmatter.category}/${item.slug}`}>

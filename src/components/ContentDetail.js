@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Seo from './seo';
 import Layout from './Layout';
 
-const ContentDetail2 = ({ pageContext }) => {
+const ContentDetail = ({ pageContext }) => {
     const { data } = pageContext;
     return (
         <div>
@@ -26,4 +26,4 @@ const ContentDetail2 = ({ pageContext }) => {
     )
 }
 
-export default ContentDetail2;
+export default ContentDetail;
