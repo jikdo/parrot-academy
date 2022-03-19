@@ -38,6 +38,7 @@
     featured: true
     hero_image: "relative/path/to/image" or null 
     hero_image_alt: "image alt text"
+    mini_description: "A one line description about the content"
     ---
     ```
 
