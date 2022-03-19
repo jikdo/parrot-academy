@@ -38,7 +38,8 @@ query {
             gatsbyImageData
           }
         }
-        hero_image_alt  
+        hero_image_alt
+        mini_description
       }
     }
   }

@@ -16,7 +16,7 @@ const ContentDetail = ({ pageContext }) => {
             <div className={articleContent}>
                 <p className={articleNav}><Link to="/">Home</Link> > <Link to={`/${data.frontmatter.category}`}>{data.frontmatter.category.split("-").join(" ")} </Link>  > <span className={textGrey}>Article</span></p>
                 <h1 className={articleTitle}>{data.frontmatter.title}</h1>
-                <p className={textGrey}>{data.frontmatter.date}</p>
+                <p className={textGrey}>Last updated: {data.frontmatter.date}</p>
                 <GatsbyImage image={(() => getImage(data.frontmatter.hero_image))()} alt={data.frontmatter.hero_image_alt} />
 
                 <p><MDXRenderer>{data.body}</MDXRenderer></p>

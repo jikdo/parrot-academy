@@ -39,6 +39,7 @@ query {
           }
         }
         hero_image_alt
+        mini_description
       }
     }
   }
