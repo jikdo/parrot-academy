@@ -1,0 +1,25 @@
+---
+title: "Understanding Collateral Ratio"
+date: "2022-03-19"
+category: "getting-started"
+featured: true
+hero_image: "./pai.png"
+hero_image_alt: null
+mini_description: "Understand the PAI stable coin and how to utilize it to maximize your yield"
+---
+
+Collateral ratio on a vault determines how much you can borrow against your collateral and also determines at what point 
+your collateral risks being liquidated. The formula for determing collateral ratio of a postion is 
+ `Value of Collateral / Value of Debt * 100` represented as a percentage.
+
+ Each asset accepted as collateral has it's own minimum collateral ratio. It is important to make sure the collateral ratio on your 
+ collateral is always equal or above the minimum collateral ratio of the vault you borrowed from. Else you will get liquidated.
+
+You can take these steps to avoid dropping below the collateral ratio;
+* Repay some or all of your debt till you are in a safe zone.
+* Deposit more collateral in the vault till you are safe zone.
+
+For example, if you deposit 1000 USDC into the USDC+EARN vault, which has a collateral ratio of 120%. 
+Let's say you borrow 400 USD, you collateral ratio will be `1000 USDC / 400 USDC * 100 = 250%`. Which puts you in safe area.
+The amount you borrow determines the price at which you will get liquidated unless you add more collateral or repay your debt as 
+discussed above.
