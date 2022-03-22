@@ -1,0 +1,25 @@
+---
+title: What is a Vault
+date: "2022-03-19"
+category: "getting-started"
+featured: true
+hero_image: "./vault.png"
+hero_image_alt: "A picture of a vault"
+mini_description: "Understand vaults in Parrot and how to use them"
+---
+
+A vault is a solana program that allows you to borrow assets against your collateral. It works by accepting deposits
+of a required asset used as collateral so that you can borrow a particular asset for your needs. There are serveral vaults which supports
+a wide range of assets as collateral on Parrot. 
+
+Parrot currently allows you to borrow these assets from a vault;
+
+1. Pai - An over-collateralized stable coin pegged to the USD
+2. pSOL - An over-collateralized stable coin that uses aggregated staked sol tokens like prtSOL and mSOL. It is pegged to SOL 
+3. pBTC - An over-collateralized stable coin pegged to BTC
+
+Parrot has +EARN vaults that allows you to use leverage to increase your collateral by repeating the deposit and borrow process
+with your borrowed capital. This exposes you to higher yields since assets deposited as collateral are used to farm yield and distributed to depositors.
+
+You can only borrow assets up to a certain amount based on the collateral ratio of the vault. This helps debt to always be over-collateralized. And incase the 
+deposited assets drops in value, a user may risk being liquidated. Unless they increase their collateral or pay their debt. [You can read more about Collateral Ratio here](/getting-started/understanding-collateral-ratio/)
